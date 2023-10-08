@@ -1,0 +1,72 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Skills </title>
+        <link rel="stylesheet" href="C:\Users\64381\Documents\GitHub\ist263\lab06\styles.css">
+    </head>
+    
+    <body>
+        <h2> Tables </h2>
+       
+        <table>
+            <caption>Technical Skills</caption>
+            <tr>
+                <th>Category</th>
+                <th>Skill</th>
+                <th>Competency Level</th>
+            </tr>
+            <tr class="evenrow">
+                <td>Coding</td>
+                <td>R</td>
+                <td>Advanced</td>
+            </tr>
+            <tr>
+                <td>Coding</td>
+                <td>Python</td>
+                <td>Intermediate</td>
+            </tr>
+            <tr class="evenrow">
+                <td>Coding</td>
+                <td>HTML</td>
+                <td>Entry</td>
+            </tr>
+            <tr>
+                <td>Coding</td>
+                <td>SQL</td>
+                <td>Entry</td>
+            </tr>
+        </table>
+        
+        <br>
+       
+        <form action="https://formspree.io/f/xgejndky" method="post">
+            <!-- Text field -->
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email"> <br>
+            
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"> <br>
+        
+            <label for="Mobile-Phone">Mobile Phone:</label>
+            <input type="tel" id="Mobile-Phone" name="Phone"> <br>
+        
+            <!-- Radio button -->
+            <label>Are you a recruiter?</label> <br>
+            <input type="radio" id="yes" name="recruiter" value="yes">
+            <label for="yes">Yes</label>
+            <input type="radio" id="no" name="recruiter" value="no">
+            <label for="no">No</label> <br>
+        
+            <!-- Checkbox -->
+            <input type="checkbox" id="terms" name="terms" value="agree">
+            <label for="terms">I want to receive follow-up emails </label> <br>
+        
+            <!-- Textarea -->
+            <label for="message">Please Leave Your Comments:</label> <br>
+            <textarea id="message" name="message" rows="6" cols="60"></textarea> <br>
+        
+            <!-- Submit button -->
+            <input type="submit" value="Submit">
+        </form>
+        
