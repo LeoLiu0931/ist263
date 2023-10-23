@@ -1,37 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Yihe Liu's Contact</title>
-        <link rel="stylesheet" href="styles.css">
 
-    </head>
-    <body>
-        <nav>
-            <a href="https://leoliu0931.github.io/ist263/lab07/.">Home</a> |
-            <a href="https://leoliu0931.github.io/ist263/lab06/skills.html">Skills</a> |
-            <a href="https://leoliu0931.github.io/ist263/lab06/contact.html">Contact</a>
-        </nav>
-        <h1>Contact Information</h1>
+<head>
+    <meta charset="utf-8">
+    <title>Yihe Liu's Contact</title>
+    <link rel="stylesheet" href="styles.css">
 
-        <h2>Mobile</h2>
-        <p>315-416-5546</p>
+    <style>
+        /* Flex container */
+        .flex-container {
+            display: flex;
+            flex-direction: column; /* stack children vertically */
+            padding: 2rem; /* space between edge of the page and flexboxes */
 
-        <h2>Email</h2>
-        <a href="mailto:yliu29@syr.edu">yliu29@syr.edu</a>
+        }
 
-        <h2>Address</h2>
-        <p>101 S Salina Street</p>
+        /* Individual Flex items */
+        .flex-item {
+            background-color: #f2f2f2; /* light grey background */
+            border-radius: 15px; /* rounded corners */
+            padding: 2rem; /* space inside the containers */
 
-        <h2>LinkedIn</h2>
-        <img src="../images/linkedin_re.png" alt="linkedin_re">
-        <a href="https://www.linkedin.com/in/yiheliu0931/" target="_blank">Yihe Liu on LinkedIn</a>
-        
-        
+        }
 
-        <h2>Google Map Location</h2>
-        <img src="../images/map.jpg" alt="map">
+        /* Styling for the form */
+        form {
+            float: left;
+            width: 60%;
+        }
 
-    </body>
+        form label, form input, form textarea {
+            display: block;
+            margin-bottom: 1rem;
+            width: 90%; /* slightly less than 100% to account for any paddings/borders */
+        }
+
+        /* Map styling */
+        .map-container {
+            float: right;
+            width: 35%; /* less than 40% to ensure some gap between form and map */
+        }
+
+        .map-container img {
+            max-width: 100%;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <nav>
+        <a href="https://leoliu0931.github.io/ist263/lab07/.">Home</a> |
+        <a href="https://leoliu0931.github.io/ist263/lab06/skills.html">Skills</a> |
+        <a href="https://leoliu0931.github.io/ist263/lab06/contact.html">Contact</a>
+    </nav>
+    <h1>Contact Information</h1>
+
+    <div class="flex-container">
+        <!-- First area: contact and link -->
+        <div class="flex-item">
+            <h2>Mobile</h2>
+            <p>315-416-5546</p>
+
+            <h2>Email</h2>
+            <a href="mailto:yliu29@syr.edu">yliu29@syr.edu</a>
+
+            <h2>Address</h2>
+            <p>101 S Salina Street</p>
+
+            <h2>LinkedIn</h2>
+            <img src="../images/linkedin_re.png" alt="linkedin_re">
+            <a href="https://www.linkedin.com/in/yiheliu0931/" target="_blank">Yihe Liu on LinkedIn</a>
+        </div>
+
+        <!-- Second area: Form and map pic -->
+        <div class="flex-item">
+            <!-- Form -->
+            <form action="https://formspree.io/f/xgejndky" method="post">
+                <!-- Text field -->
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email">
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+
+                <!-- Textarea -->
+                <label for="message">Please Leave Your Comments:</label>
+                <textarea id="message" name="message" rows="6" cols="60"></textarea>
+
+                <!-- Submit button -->
+                <input type="submit" value="Submit">
+            </form>
+
+            <!-- Map -->
+            <div class="map-container">
+                <h2>Google Map Location</h2>
+                <img src="../images/map.jpg" alt="map">
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>
-
