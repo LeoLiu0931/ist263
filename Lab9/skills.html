@@ -1,68 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yihe's Skills</title>
+    <title>Skills</title>
     <style>
         body {
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            background-color: white;
+            background-color: rgba(93, 140, 207, 0.115);
+            margin: 2em;
+            padding: 2em;
         }
-        header {
-            background-color: #6495ED;
-            color: white;
-            padding: 10px 0;
+
+        h1 {
+            font-size: 200%;
+            text-align: center;
         }
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 20px;
+        
+        p {
+            font-weight: bolder;
+            margin-bottom: 2em;
         }
-        .other-skills {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
+
+
+        .flexbox-container {
+            display: flex;
+            max-width: calc(100% - 2em); 
         }
+
+        .flexbox-container > div {
+            flex: 1;
+        }
+
+        .skills-section {
+            flex: 3;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .skills-section div {
+            margin: 1em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
         .skill-icon {
             width: 40px; 
-            height: auto;
-        }   
+            height: auto; 
+        }
+
+        .skill-icon-r {
+            width: 27px; 
+            height: auto; 
+        }
+
+        aside {
+            flex: 0.5;
+            width: 50px;
+            background-color: rgba(30, 143, 255, 0.539);
+            padding: 1em;
+            border-radius: 15px;
+            margin-left: 10em;
+            margin-right: 5em;
+        }
     </style>
 </head>
 <body>
 
-<header>
     <nav>
         <a href="https://leoliu0931.github.io/ist263/lab07/.">Home</a> |
         <a href="https://leoliu0931.github.io/ist263/lab06/skills.html">Skills</a> |
         <a href="https://leoliu0931.github.io/ist263/lab06/contact.html">Contact</a>
     </nav>
-</header>
 
-<div class="container">
-    <h2>Technical Skills</h2>
-    <p>In college, I have learned a lot about data analysis and other tech skills that I believe will be the foundation of my future career.</p>
+    <h1>Technical Skills</h1>
 
-    <div class="skills-grid">
-        <div><img class="skill-icon" src="..\images\html.svg" alt="HTML Icon"><br>HTML</div>
-        <div><img class="skill-icon" src="..\images\sql.svg" alt="SQL Icon"><br>SQL</div>
-        <div><img class="skill-icon" src="..\images\r.svg" alt="R Icon"><br>R</div>
-        <div><img class="skill-icon" src="..\images\python.svg" alt="Python Icon"><br>Python</div>
-        <div><img class="skill-icon" src="..\images\css.svg" alt="CSS Icon"><br>CSS</div>
+    <p>I have learned a lot about data analysis and other technologies that I believe will be the foundation of my future career.</p>
+
+    <div class="flexbox-container">
+        <div class="skills-section">
+            <div><img class="skill-icon" src="..\images\html.svg" alt="HTML Icon"><span>HTML</span></div>
+            <div><img class="skill-icon" src="..\images\sql.svg" alt="SQL Icon"><span>SQL</span></div>
+            <div><img class="skill-icon-r" src="..\images\r.svg" alt="R Icon"><span>R</span></div>
+            <div><img class="skill-icon" src="..\images\python.svg" alt="Python Icon"><span>Python</span></div>
+            <div><img class="skill-icon" src="..\images\css.svg" alt="CSS Icon"><span>CSS</span></div>
+        </div>
+
+        <aside>
+            <h2>Other Skills</h2>
+            <ul>
+                <li>Orange Data Mining</li>
+                <li>Tableau</li>
+                <li>PowerBI</li>
+                <li>Adobe Illustrator</li>
+                <li>MS Project</li>
+                <li>MS Access</li>
+            </ul>
+        </aside>
     </div>
-
-    <div class="other-skills">
-        <strong>Other Skills</strong>
-        <ul>
-            <li>MS Project</li>
-            <li>Adobe Illustrator</li>
-            <li>MS Excel</li>
-            <li>Orange Data Mining</li>
-            <li>PowerBI</li>
-        </ul>
-    </div>
-</div>
 
 </body>
 </html>
