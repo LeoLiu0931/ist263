@@ -57,7 +57,7 @@ main div {
 }
 
 main img {
-    max-width: 50%; /* Adjust image size */
+    max-width: 60%; /* Adjust image size */
     height: auto;
     margin: 20px auto;
     border: 1px solid #ddd;
