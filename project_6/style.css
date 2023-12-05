@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+header, main, footer {
+    max-width: 1000px; /* Adjust this value to set the desired width */
+    margin: 0 auto; /* Centers the content */
+    padding: 15px; /* Adds some spacing inside the containers */
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    margin: 5px;
+    text-decoration: none;
+    color: #000;
+}
+
+nav a:hover {
+    color: #555;
+}
+
+
+main div, footer p {
+    text-align: center; /* Center text inside these elements */
+}
+
+main img {
+    max-width: 70%; /* Adjust the size of the image */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Makes the image a block element */
+    margin: 15px auto; /* Centers the image and adds space above and below */
+    border: 1px solid #ddd; /* Optional: adds a light border around the image */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    header, main, footer {
+        width: 95%;
+        padding: 10px;
+    }
+
+    main img {
+        max-width: 70%; /* Larger images for smaller screens */
+    }
+}
