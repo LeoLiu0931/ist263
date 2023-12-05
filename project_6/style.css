@@ -41,10 +41,14 @@ main img {
 
 /* Responsive adjustments */
 @media (max-width: 600px) {
-    header, main, footer {
-        width: 95%;
-        padding: 10px;
+    nav a {
+        font-size: 0.8em; /* Smaller font size */
+        margin: 3px; /* Reduced margin */
+        padding: 5px; /* Adjust padding as needed */
     }
+
+}
+
 
     main img {
         max-width: 70%; /* Larger images for smaller screens */
