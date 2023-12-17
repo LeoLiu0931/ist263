@@ -84,3 +84,80 @@ footer {
         max-width: 70%;
     }
 }
+
+
+#photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.photo-collection {
+    width: 30%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.photo-collection img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.photo-collection p {
+    font-size: 1em;
+    margin-top: 8px;
+}
+
+.photo-collection a {
+    color: black; 
+    text-decoration: none; 
+}
+
+.photo-collection a:hover {
+    text-decoration: underline; 
+}
+
+ #photo-display {
+    margin: 20px auto;
+    width: fit-content; /* Adjust this as needed */
+}
+
+.photo-display img {
+    width: auto; /* Width will be proportional to the height */
+    max-width: 80%; /* Adjust this value as needed */
+    max-height: 550px; /* Adjust this value as needed */
+    height: auto; /* Height will scale proportionally */
+    border-radius: 8px;
+}
+
+
+#photo-display p {
+    text-align: left;
+}
+
+#navigation {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#navigation button {
+    background: none;
+    color: black; 
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    text-decoration: underline;
+    font-family: inherit; 
+}
+
+#navigation button:hover {
+    color: lightgrey; 
+    text-decoration: none;
+}
+
+#navigation button:focus {
+    outline: none;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photograph Collection</title>
+    <link rel="stylesheet" href="../project_7/style.css">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1> &nbsp&nbsp&nbsp&nbsp Yihe Liu - Odyssey</h1>
+        <nav>
+            &nbsp <a href="https://leoliu0931.github.io/ist263/project_7/index.html">Homepage</a> &nbsp&nbsp&nbsp&nbsp&nbsp
+            <a href="https://leoliu0931.github.io/ist263/project_7/gallery.html">Gallery</a> &nbsp&nbsp&nbsp&nbsp&nbsp
+            <a href="https://leoliu0931.github.io/ist263/project_7/sharing.html">Sharing</a> &nbsp&nbsp&nbsp&nbsp&nbsp
+            <a href="https://leoliu0931.github.io/ist263/project_7/thought.html">Thought</a>
+            
+        </nav>
+        <hr>
+    </header>
+
+    <main>
+        <div class="photo-display" id="photo1">
+            <img src="../project_7/Media/monu_valley.jpg" alt="monument valley's sunset">
+            <p>In the fall of 2023, I visited Arizona and Utah, with its deserts and wilderness, lakes and mountains.</p>
+        </div>
+
+        <div class="photo-display" id="photo2" style="display:none;">
+            <img src="../project_7/Media/wild.jpg" alt="desert nevada">
+        </div>
+
+        <div class="photo-display" id="photo3" style="display:none;">
+            <img src="../project_7/Media/antelope.jpg" alt="antelope canyon">
+        </div>
+
+        <div class="photo-display" id="photo4" style="display:none;">
+            <img src="../project_7/Media/bowell_lake.jpg" alt="lake powell">
+        </div>
+
+        <div class="photo-display" id="photo5" style="display:none;">
+            <img src="../project_7/Media/valley.jpg" alt="bryce canyon">
+        </div>
+
+        <div id="navigation">
+            <button id="prev">Previous</button>
+            <button id="next">Next</button>
+        </div>
+    </main>
+
+
+    <script>
+        let currentPhoto = 1;
+        const totalPhotos = 5; // Update this based on the number of photos
+
+        document.getElementById('prev').addEventListener('click', function() {
+            let prevPhoto = currentPhoto - 1;
+            if (prevPhoto < 1) prevPhoto = totalPhotos;
+
+            document.getElementById('photo' + currentPhoto).style.display = 'none';
+            document.getElementById('photo' + prevPhoto).style.display = 'block';
+
+            currentPhoto = prevPhoto;
+        });
+
+        document.getElementById('next').addEventListener('click', function() {
+            let nextPhoto = currentPhoto + 1;
+            if (nextPhoto > totalPhotos) nextPhoto = 1;
+
+            document.getElementById('photo' + currentPhoto).style.display = 'none';
+            document.getElementById('photo' + nextPhoto).style.display = 'block';
+
+            currentPhoto = nextPhoto;
+        });
+    </script>
+</body>
+</html>
